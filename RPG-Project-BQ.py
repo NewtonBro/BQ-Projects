@@ -1,13 +1,19 @@
-print("\n'Beast Of The Indus' - A Text Based RPG by Fardan Bin Khalid\n")
+print("\n'Beast Of The Indus' - A Text Based RPG by Fardan, Isharb and Shabeeb.\n")
+
 #player's bio data
+
 name = input("Enter a name for your character: ")
 HP = 100
 Inventory = { 'weapon':'dagger', 'armour':'regular vest', 'consumable':['water bottle'], 'tools':['rope']}
+
 #game intialization prompt
-def press_any_key():
-    input('\n<Press any key to continue>\n')
-press_any_key()
+
+def press_any_key(): #A function asking user to input anything and runs following code after enter key is pressed
+    input('\n<Press any key and enter to continue>\n')
+press_any_key() #calling the declared function
+
 #game starts after user input
+
 print(f"\n'Assalamualaikum {name}! welcome to Kot Mitthan, a little village amidst the Indus Valley, what brings you here?' a guard standing in front of the town gate asks. \n 1 - I'm here to meet a friend\n 2 - Just passing by\n")
 
 #Decision Making Mechanism, Inspired by telltale games
@@ -51,7 +57,9 @@ while True:
 	else:
 		print('Invalid Input')
 		continue
-#Arrival at Mehmood's House'
+
+#Arrival at Mehmood's House, Dialogue between Mehmood and user by using simple print fuction.
+
 print(f"'Assalamualikum, my dear brother {name}! It is truly a pleasant surprise to see you here! come inside, come inside.' says your friend mehmood, as his face shines with pure happiness upon your arrival'")
 print("\nAfter answering his salam and thanking him for the warm welcome, you walk in with mehmood into his house, small - made out of mud bricks but beautiful in a way, and sit down with mehmood on wooden chairs. Mehmood asks his son to go bring you a glass of fresh lassi.")
 print("\n'What brings me here is a rumor about your village, spreading like wildfire' you speak after clearing your throat")
@@ -60,7 +68,11 @@ print("\n'No, not after you have said it. Alright then, killing the beast is my 
 print("\nMehmood: 'I understand your passion, but beware, this demon is no joke. The bakunawa is an eel-like beast that is larger than three ferries combined. It has drowned over 19 ships. If you wish to proceed, go visit the old fisherman Mushtaque Baba near the river bank after fajr, he knows a lot more than I do'")
 press_any_key()
 print("\nThe dawn breaks and you go outside to continue your quest. Mehmood offers you a mango.\nA mango has been added to your inventory\n What do you want to do?\n 1 - Go to see Mushtaque baba to inquire him about the bakunawa\n 2 - Visit the well near shorkot fort")
+
+# Appending an item into the list "consumable" nested inside the dictionary "inventory"
+
 Inventory['consumable'].append('mango')
+
 while True:
 	Decision3 = input("What do you wish to do? choose either 1 or 2\n")
 	if Decision3 == '2':
@@ -74,13 +86,16 @@ while True:
 	else:
 		print('Invalid Input')
 		continue
-#Bakunawa Lore Revalation
+
+#Bakunawa Lore Revalation through a converstion with a character
+
 print("\n---Entering the river bank---\n")
 press_any_key()
 print("When you finally arrive at the bank of the Indus, you spot a thin figure standing peacefully next to a ship dock.\n\nHe is looking over the horizon line. You approach him and after greeting him, you gently ask him if he wishes to answer a few questions of yours.\n\nThe old man hesitates at first but upon insisting, he says 'alright young man, if you really are that curious then let me tell you about this bakunawa. Legend says he once drowned a mughal ship, and the treasure inside corrupted him, making him crave for more. Ever since then, he has been haunting the waters of Indus. By now he has drowned 19 ships. He has brass scales and sharp teeth, each tooth indicating a vessel that became his victim with its name engraved on it. The only weak point any man ever noticed was it's 18th tooth which it gained after drowning a british ship during the occupation. Mostly it is spotted at the trimmu barrage near which a british steamboat wreckage lies. If you really wish to face it, keep this harpoon with you. It's sound paralyzes it.'")
 Inventory['tools'].append('harpoon')
 print("\nA harpoon has been added to your inventory")
 press_any_key()
+
 #Boss Fight Sequence
 
 print("\nYou now advance towards the ship wreckage to encounter this beast.")
@@ -91,7 +106,7 @@ print("You reach the barrage and spot a ship wreckage, not too far away lies a b
 
 print("The River Begins To Vibrate Like A Shivering Man Lost In Snow.....\n\n--§+-> BAKUNAWA RISES FROM THE RIVER <-+§--")
 
-bakuHP = 130
+bakuHP = 130 #storing values for the monster's health and him being paralyzed in variables for using later
 bakuPara = 0
 
 #Turn-based combat system inspired by pokemon and final fantasy
