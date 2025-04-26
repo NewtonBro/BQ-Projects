@@ -1,4 +1,4 @@
-print("\n'Beast Of The Indus' - A Text Based RPG by Fardan, Isharb and Shabeeb.\n")
+print("\n'Beast Of The Indus' - A Text Based RPG by Fardan, Isharab and Shabeeb.\n")
 
 #player's bio data
 
